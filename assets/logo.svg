@@ -1,5 +1,22 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="200" height="48" viewBox="0 0 200 48">
-  <rect x="0" y="8" width="32" height="32" rx="8" fill="#0A2540"/>
-  <text x="16" y="30" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="800" font-size="18" fill="#FF6B35">F</text>
-  <text x="40" y="30" font-family="Inter, system-ui, sans-serif" font-weight="700" font-size="20" fill="#0A2540" letter-spacing="-0.5">FuelFlow</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="56" viewBox="0 0 220 56" role="img" aria-label="FuelFlow">
+  <defs>
+    <linearGradient id="ff-blue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3AC2FF"/>
+      <stop offset="100%" stop-color="#0E8FE0"/>
+    </linearGradient>
+    <linearGradient id="ff-text" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0A1B2E"/>
+      <stop offset="55%" stop-color="#0A1B2E"/>
+      <stop offset="55%" stop-color="#1DA8FF"/>
+      <stop offset="100%" stop-color="#3AC2FF"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(2,4)">
+    <path d="M4 4 H30 V13 H16 V22 H28 V31 H16 V48 H4 Z" fill="url(#ff-blue)"/>
+    <path d="M30 13 L42 13 L46 17 L46 30 L42 34 L34 34 L34 22 L30 22 Z" fill="#FFFFFF"/>
+    <rect x="42" y="9" width="4" height="6" rx="1" fill="#FFFFFF"/>
+    <circle cx="50" cy="28" r="3.5" fill="#1DA8FF"/>
+    <path d="M50 22 Q47 26 50 28 Q53 26 50 22 Z" fill="#1DA8FF"/>
+  </g>
+  <text x="64" y="36" font-family="Inter, system-ui, sans-serif" font-weight="800" font-size="22" letter-spacing="-0.5" fill="url(#ff-text)">FuelFlow</text>
 </svg>

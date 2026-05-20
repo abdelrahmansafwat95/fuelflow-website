@@ -1,4 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="14" fill="#0A2540"/>
-  <text x="32" y="44" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="800" font-size="38" fill="#FF6B35">F</text>
+  <defs>
+    <linearGradient id="fav-blue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3AC2FF"/>
+      <stop offset="100%" stop-color="#0E8FE0"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="#0A1B2E"/>
+  <path d="M14 12 H40 V22 H26 V30 H38 V40 H26 V54 H14 Z" fill="url(#fav-blue)"/>
+  <path d="M40 22 L50 22 L54 26 L54 36 L50 40 L44 40 L44 30 L40 30 Z" fill="#FFFFFF"/>
+  <circle cx="56" cy="36" r="3" fill="#3AC2FF"/>
 </svg>
