@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" role="img" aria-label="Explore it on AppGallery">
+  <rect width="200" height="60" rx="10" fill="#000"/>
+  <g transform="translate(12, 11)" fill="#fff">
+    <path d="M19 1.5C19 0.7 18.3 0 17.5 0h-15C1.7 0 1 0.7 1 1.5v34c0 0.8 0.7 1.5 1.5 1.5h15c0.8 0 1.5-0.7 1.5-1.5v-34z" fill="#fff" fill-opacity="0"/>
+    <!-- Stylized hexagonal gallery icon -->
+    <path d="M10 4l-7 4v8l7 4 7-4V8z" fill="none" stroke="#fff" stroke-width="1.6"/>
+    <circle cx="10" cy="12" r="2.5" fill="#fff"/>
+  </g>
+  <text x="44" y="26" fill="#fff" font-family="HarmonyOS Sans, Roboto, Arial, sans-serif" font-size="9" font-weight="400">EXPLORE IT ON</text>
+  <text x="44" y="43" fill="#fff" font-family="HarmonyOS Sans, Roboto, Arial, sans-serif" font-size="17" font-weight="500" letter-spacing="-0.2">AppGallery</text>
+</svg>

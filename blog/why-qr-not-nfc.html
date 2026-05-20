@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Why we chose QR over NFC for fuel authorization | FuelFlow Blog</title>
+<meta name="description" content="NFC cards cost 100–200 EGP each, get lost, and create a logistics nightmare. The math behind dropping cards in favour of QR — and what changed when we did." />
+<link rel="canonical" href="https://fuelflow.eg/blog/why-qr-not-nfc.html" />
+<meta property="og:title" content="Why we built FuelFlow on QR codes instead of NFC cards" />
+<meta property="og:description" content="The math, the security story, and what changed when we cut the cards." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://fuelflow.eg/blog/why-qr-not-nfc.html" />
+<meta property="og:image" content="https://fuelflow.eg/assets/og-cover.png" />
+<meta property="article:published_time" content="2026-04-28T09:00:00+02:00" />
+<meta property="article:author" content="Yara Ibrahim" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="geo.region" content="EG" />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+<link rel="stylesheet" href="/assets/styles.css" />
+<script>(function(){try{var t=localStorage.getItem("ff-theme")||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Why we chose QR over NFC for fuel authorization","datePublished":"2026-04-28","dateModified":"2026-04-28","author":{"@type":"Person","name":"Yara Ibrahim"},"publisher":{"@type":"Organization","name":"FuelFlow","logo":{"@type":"ImageObject","url":"https://fuelflow.eg/assets/fuelflow-logo.png"}},"image":"https://fuelflow.eg/assets/og-cover.png","mainEntityOfPage":"https://fuelflow.eg/blog/why-qr-not-nfc.html"}</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav">
+    <a href="/" class="brand" aria-label="FuelFlow home">
+      <img src="/assets/fuelflow-logo.png" alt="FuelFlow" class="brand-logo brand-logo-light" width="155" height="40" />
+      <img src="/assets/fuelflow-logo-dark.png" alt="FuelFlow" class="brand-logo brand-logo-dark" width="155" height="40" />
+    </a>
+    <nav aria-label="Primary">
+      <ul class="nav-links" id="nav-menu">
+        <li><a href="/for-fleets.html">For Fleets</a></li>
+        <li><a href="/for-stations.html">For Stations</a></li>
+        <li><a href="/drivers.html">Drivers</a></li>
+        <li><a href="/how-it-works.html">How it works</a></li>
+        <li><a href="/security.html">Security</a></li>
+        <li><a href="/pricing.html">Pricing</a></li>
+        <li><a href="/blog/">Blog</a></li>
+      </ul>
+    </nav>
+    <div class="nav-cta">
+      <button class="theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode" data-track="theme_toggled"><svg class="theme-icon-sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg><svg class="theme-icon-moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+      <a class="lang-switch" href="/ar/blog/" data-track="language_switched">العربية</a>
+      <a class="btn btn-primary" href="/contact.html" data-track="demo_requested"><span class="btn-text-hide">Book a</span> demo</a>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="nav-menu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<article class="post">
+  <header class="post-header container">
+    <div class="post-meta">
+      <a href="/blog/" class="back-link">← Blog</a>
+      <span class="blog-card-tag">Product</span>
+      <time datetime="2026-04-28">Apr 28, 2026</time>
+      <span>· 6 min read</span>
+    </div>
+    <h1>Why we built FuelFlow on QR codes instead of NFC cards.</h1>
+    <p class="lead">Most fleet fuel platforms in the Egyptian market lean on physical NFC cards. We don't. Here's the math we ran, the operational story underneath it, and why we think QR is the right call for the next decade of Egyptian fleet fuel.</p>
+    <p class="post-author">By <strong>Yara Ibrahim</strong>, Head of Product</p>
+  </header>
+
+  <div class="post-body container">
+
+    <h2>The unit economics of cards</h2>
+    <p>An NFC fuel card in Egypt typically costs the fleet between 100 and 200 EGP to issue, depending on volume. That's a one-time cost — except cards get lost, drivers leave, vehicles are sold, and a real 200-vehicle fleet reissues roughly 8–12% of its cards every year. So your "one-time" cost is actually a recurring 16–24 EGP per vehicle per year, plus installation fees, plus the courier costs to deliver replacements to drivers on the road.</p>
+    <p>None of that buys you a single litre of fuel. It's pure friction.</p>
+
+    <h2>What we replaced cards with</h2>
+    <p>Every driver in our system carries a phone. We already need them to install the FuelFlow Driver App for budget visibility, route routing, and offline transaction queueing. So we did the obvious thing: put the credential in the app.</p>
+    <p>The credential itself is a rotating QR code that's regenerated every 60 seconds, signed against the driver's session, the device, and the dispenser being scanned. The pump prints its own static QR — that's what the driver actually scans. The driver's identity rides in the session, not on the paper.</p>
+
+    <h2>"But cards are more secure than QR"</h2>
+    <p>This is the most common pushback we get, and it's almost always wrong. The security model of an NFC card in a fleet context is:</p>
+    <ul>
+      <li>The card holds a static identifier.</li>
+      <li>If you have the card, you are the driver.</li>
+      <li>The card has no biometric, no PIN, no session, no second factor.</li>
+    </ul>
+    <p>That isn't more secure than a phone session bound to a device with a fingerprint or face unlock. It's significantly less secure. The card is a bearer token without expiry. Anyone in possession is the driver.</p>
+    <p>The reason people <em>feel</em> cards are more secure is the same reason people felt printed boarding passes were more secure than phone boarding passes in 2010: cards are physical and "real." The phones won on travel; they're winning on fuel.</p>
+
+    <h2>The operational story</h2>
+    <p>We have a 350-vehicle fleet customer in 6th of October who, before FuelFlow, ran a small full-time team just for card administration. Issuing new cards. Couriering them to depots. Cancelling them when drivers left. Maintaining the inventory in a spreadsheet. The work was real and expensive.</p>
+    <p>After switching, that team got reassigned. Driver onboarding now takes 4 minutes from "new hire" to "first authorized fill" — entirely inside the FuelFlow Admin Dashboard. There's no card to ship.</p>
+
+    <h2>What about stations?</h2>
+    <p>The other half of the equation is the fuel station. A typical NFC system needs a reader at every pump or every attendant station, plus the cabling and the maintenance. Egyptian fuel stations have a wide range of forecourt layouts; retrofitting NFC readers is a multi-week project.</p>
+    <p>Printing a QR sticker takes 30 seconds. The Attendant App runs on the phones the attendants already own. We can onboard a new station in a single afternoon, with no hardware costs to the station owner.</p>
+
+    <h2>The tradeoffs we accepted</h2>
+    <p>We're not pretending QR is free of issues. Two are real:</p>
+    <ul>
+      <li><strong>Battery dependency.</strong> If the driver's phone is dead, they can't authorize. We mitigate this with a small, free, printable "backup QR" each driver carries as a wallet-sized card — but it has stricter usage limits (max 2 fills/day) and a daily ceiling.</li>
+      <li><strong>Camera dependency.</strong> The driver needs a working camera. In our 18 months in production, this has been less of a problem than expected — we've seen a 0.4% camera-related authorization failure rate.</li>
+    </ul>
+
+    <h2>The thing nobody talks about</h2>
+    <p>Cards put the trust in physical objects. Phones put the trust in identity. The future of fleet management — fuel, tolls, parking, maintenance — is going to live on identity, because that's what scales. Building on cards in 2026 is building for the world that ended in 2018.</p>
+
+    <p class="post-cta">Curious how this plays out for your fleet? <a href="/contact.html">Book a 20-minute demo</a> — we'll show you the QR auth flow on a real pump and let you stress-test it yourself.</p>
+
+  </div>
+</article>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="brand" aria-label="FuelFlow">
+          <img src="/assets/fuelflow-logo.png" alt="FuelFlow" class="brand-logo brand-logo-light" width="155" height="40" />
+          <img src="/assets/fuelflow-logo-dark.png" alt="FuelFlow" class="brand-logo brand-logo-dark" width="155" height="40" />
+        </a>
+        <p>Cashless fuel management for Egyptian corporate fleets.</p>
+      </div>
+      <div class="footer-col"><h5>Product</h5><ul><li><a href="/for-fleets.html">For Fleets</a></li><li><a href="/for-stations.html">For Stations</a></li><li><a href="/drivers.html">Driver App</a></li><li><a href="/how-it-works.html">How it works</a></li><li><a href="/pricing.html">Pricing</a></li></ul></div>
+      <div class="footer-col"><h5>Company</h5><ul><li><a href="/about.html">About</a></li><li><a href="/contact.html">Contact</a></li><li><a href="/security.html">Security</a></li><li><a href="/blog/">Blog</a></li></ul></div>
+      <div class="footer-col"><h5>Legal</h5><ul><li><a href="/legal/privacy.html">Privacy</a></li><li><a href="/legal/terms.html">Terms</a></li></ul></div>
+      <div class="footer-col"><h5>Language</h5><ul><li><a href="/">English</a></li><li><a href="/ar/">العربية</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><div>© 2026 FuelFlow. Powered by <a href="https://foxsystemstech.com" rel="noopener" target="_blank">foxsystemstech.com</a>.</div><div class="links"><a href="mailto:info@foxystems.com">info@foxystems.com</a><a href="/legal/privacy.html">Privacy</a><a href="/legal/terms.html">Terms</a></div></div>
+  </div>
+</footer>
+
+<a href="https://wa.me/201038450546" class="fab-whatsapp" data-track="whatsapp_clicked" aria-label="Chat on WhatsApp" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448L.057 24z"/></svg></a>
+
+<script src="/assets/script.js" defer></script>
+</body>
+</html>

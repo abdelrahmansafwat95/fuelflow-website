@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" role="img" aria-label="Get it on Google Play">
+  <rect width="200" height="60" rx="10" fill="#000"/>
+  <defs>
+    <linearGradient id="gp-green" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00C8AC"/>
+      <stop offset="100%" stop-color="#5BE8B2"/>
+    </linearGradient>
+    <linearGradient id="gp-blue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00A0FF"/>
+      <stop offset="100%" stop-color="#00E2FF"/>
+    </linearGradient>
+    <linearGradient id="gp-red" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF3A44"/>
+      <stop offset="100%" stop-color="#C31162"/>
+    </linearGradient>
+    <linearGradient id="gp-yellow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFD000"/>
+      <stop offset="100%" stop-color="#FFBD00"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(14, 16)">
+    <path d="M0.4 0.6c-.2.3-.4.7-.4 1.3v24.4c0 .5.2 1 .4 1.3l11.5-13.5L0.4 0.6z" fill="url(#gp-blue)"/>
+    <path d="M16.3 18.1l-4.4-4.0L0.4 27.6c.3.4.9.4 1.5 0L16.3 18.1z" fill="url(#gp-red)"/>
+    <path d="M16.3 10.1L1.9 0.6c-.6-.3-1.2-.4-1.5 0l11.5 13.5 4.4-4z" fill="url(#gp-green)"/>
+    <path d="M16.3 10.1l-4.4 4 4.4 4 6.0-3.4c1.7-.9 1.7-2.5 0-3.4l-6-3.2z" fill="url(#gp-yellow)"/>
+  </g>
+  <text x="44" y="26" fill="#fff" font-family="Roboto, Arial, sans-serif" font-size="9" font-weight="400">GET IT ON</text>
+  <text x="44" y="43" fill="#fff" font-family="Roboto, Arial, sans-serif" font-size="17" font-weight="500" letter-spacing="-0.2">Google Play</text>
+</svg>
