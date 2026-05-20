@@ -162,6 +162,29 @@
     document.querySelectorAll('[data-count]').forEach(el => countObs.observe(el));
   }
 
+  // Billing toggle (monthly / yearly) on the pricing page
+  const billingButtons = document.querySelectorAll('.billing-toggle-btn[data-billing]');
+  if (billingButtons.length) {
+    const amounts = document.querySelectorAll('.price-amount[data-monthly]');
+    billingButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const period = btn.getAttribute('data-billing');
+        billingButtons.forEach(b => {
+          const isActive = b === btn;
+          b.classList.toggle('is-active', isActive);
+          b.setAttribute('aria-selected', isActive ? 'true' : 'false');
+        });
+        amounts.forEach(el => {
+          el.classList.add('is-changing');
+          setTimeout(() => {
+            el.textContent = el.dataset[period];
+            el.classList.remove('is-changing');
+          }, 180);
+        });
+      });
+    });
+  }
+
   // Smooth focus on anchor links
   document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener('click', function (e) {

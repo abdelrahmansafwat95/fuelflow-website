@@ -72,62 +72,141 @@
   <div class="container">
     <div class="page-header-inner">
       <span class="persona-tag">الأسعار</span>
-      <h1>تسعير شفّاف يناسب نمو أسطولك.</h1>
-      <p class="lead">تسعير لكل مركبة، بالجنيه المصري، بلا رسوم تركيب. أغلب العملاء يبدؤون بتجربة ويوسعون عندما تتأكد الأرقام.</p>
+      <h1>باقات فيول فلو لإدارة وقود أسطولك.</h1>
+      <p class="lead">تسعير شفَّاف لكل مركبة، بالجنيه المصري — بلا رسوم تركيب، بلا رسوم بطاقات NFC، وكل المزايا متاحة في كل الباقات. ابدأ بتجربة مجانية ٣٠ يوم.</p>
+      <div class="savings-banner">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><circle cx="12" cy="12" r="10"/><path d="M16 8l-8 8M9 9l.01 0M15 15l.01 0"/></svg>
+        وفِّر حتى ٤٠٪ مقارنة بأنظمة إدارة الوقود الأخرى في مصر
+      </div>
     </div>
   </div>
 </section>
 
-<section class="section">
+<section class="section section-tight">
   <div class="container">
-    <div class="pricing-grid">
-      <div class="price-card">
-        <h3>التجربة</h3>
-        <p class="muted" style="margin-bottom:0">للأساطيل التي تبدأ تجربة محدودة</p>
-        <div class="price">٠ <span class="price-currency">ج.م</span></div>
-        <div class="price-unit">أول ٣٠ يوم · حتى ٢٠ مركبة</div>
-        <ul>
-          <li>وصول كامل للمنصة</li>
-          <li>حتى ٢٠ مركبة</li>
-          <li>دعم عبر البريد الإلكتروني</li>
-          <li>جلسة تجهيز مشمولة</li>
-        </ul>
-        <a href="/ar/contact.html" class="btn btn-secondary" style="width:100%; justify-content:center" data-track="demo_requested">ابدأ تجربتك المجانية</a>
-      </div>
-
-      <div class="price-card featured">
-        <div class="ribbon">الباقة الأكثر اختياراً</div>
-        <h3>النمو</h3>
-        <p class="muted" style="margin-bottom:0">للأساطيل التي تعمل بأحجام تشغيلية حقيقية</p>
-        <div class="price">٤٩ <span class="price-currency">ج.م</span><span class="price-period">/مركبة/شهر</span></div>
-        <div class="price-unit">خصم تلقائي عند ١٠٠+ مركبة</div>
-        <ul>
-          <li>مركبات ومستخدمون بلا حدود</li>
-          <li>كل التطبيقات الخمسة مشمولة</li>
-          <li>استيراد جماعي من Excel / CSV</li>
-          <li>وصول لواجهة البرمجة لربط ERP</li>
-          <li>دعم ذو أولوية · رد خلال ٨ ساعات</li>
-        </ul>
-        <a href="/ar/contact.html" class="btn btn-primary" style="width:100%; justify-content:center" data-track="demo_requested">ابدأ مع باقة النمو</a>
-      </div>
-
-      <div class="price-card">
-        <h3>المؤسسات</h3>
-        <p class="muted" style="margin-bottom:0">للمشغّلين متعدّدي المناطق (٥٠٠+ مركبة)</p>
-        <div class="price"><span class="price-currency">يبدأ من</span> ٢٩ <span class="price-currency">ج.م</span><span class="price-period">/مركبة/شهر</span></div>
-        <div class="price-unit">تسعير متدرِّج حسب الحجم · عقود سنوية</div>
-        <ul>
-          <li>اتفاقية مستوى خدمة + مسؤول حساب مخصَّص</li>
-          <li>صلاحيات مخصَّصة + SSO</li>
-          <li>تكاملات مباشرة (FCC, ERP)</li>
-          <li>الرد على استبيانات الأمان</li>
-          <li>تدريب موقعي في القاهرة أو الإسكندرية</li>
-        </ul>
-        <a href="/ar/contact.html" class="btn btn-secondary" style="width:100%; justify-content:center" data-track="demo_requested">اطلب عرض السعر</a>
-      </div>
+    <div class="billing-toggle" role="tablist" aria-label="نوع الفوترة">
+      <button class="billing-toggle-btn is-active" type="button" data-billing="monthly" aria-selected="true">شهرية</button>
+      <button class="billing-toggle-btn" type="button" data-billing="yearly" aria-selected="false">سنوية <span class="billing-save">خصم ١٥٪</span></button>
     </div>
 
-    <p class="muted text-center" style="margin-top:32px; font-size:0.9375rem">المحطات تنضم مجاناً خلال التجربة — نربح معاً عندما تتدفَّق أحجام الشركات عبر محطتك.</p>
+    <div class="pricing-grid-6">
+
+      <div class="price-tier">
+        <div class="price-tier-name">البرونزية</div>
+        <div class="price-tier-range">١ – ١٩ مركبة</div>
+        <div class="price">
+          <span class="price-amount" data-monthly="٤٥" data-yearly="٣٨">٤٥</span>
+          <span class="price-currency">ج.م</span>
+          <span class="price-period">/مركبة/شهر</span>
+        </div>
+        <a href="/ar/contact.html" class="btn btn-secondary" style="width:100%; justify-content:center" data-track="demo_requested">اختر هذه الباقة</a>
+      </div>
+
+      <div class="price-tier">
+        <div class="price-tier-name">الفضية</div>
+        <div class="price-tier-range">٢٠ – ٤٩ مركبة</div>
+        <div class="price">
+          <span class="price-amount" data-monthly="٣٩" data-yearly="٣٣">٣٩</span>
+          <span class="price-currency">ج.م</span>
+          <span class="price-period">/مركبة/شهر</span>
+        </div>
+        <a href="/ar/contact.html" class="btn btn-secondary" style="width:100%; justify-content:center" data-track="demo_requested">اختر هذه الباقة</a>
+      </div>
+
+      <div class="price-tier is-featured">
+        <div class="price-tier-ribbon">الأكثر اختياراً</div>
+        <div class="price-tier-name">الذهبية</div>
+        <div class="price-tier-range">٥٠ – ٩٩ مركبة</div>
+        <div class="price">
+          <span class="price-amount" data-monthly="٣٥" data-yearly="٣٠">٣٥</span>
+          <span class="price-currency">ج.م</span>
+          <span class="price-period">/مركبة/شهر</span>
+        </div>
+        <a href="/ar/contact.html" class="btn btn-primary" style="width:100%; justify-content:center" data-track="demo_requested">اختر هذه الباقة</a>
+      </div>
+
+      <div class="price-tier">
+        <div class="price-tier-name">البلاتينية</div>
+        <div class="price-tier-range">١٠٠ – ٢٤٩ مركبة</div>
+        <div class="price">
+          <span class="price-amount" data-monthly="٣٢" data-yearly="٢٧">٣٢</span>
+          <span class="price-currency">ج.م</span>
+          <span class="price-period">/مركبة/شهر</span>
+        </div>
+        <a href="/ar/contact.html" class="btn btn-secondary" style="width:100%; justify-content:center" data-track="demo_requested">اختر هذه الباقة</a>
+      </div>
+
+      <div class="price-tier">
+        <div class="price-tier-name">الماسية</div>
+        <div class="price-tier-range">٢٥٠ – ٤٩٩ مركبة</div>
+        <div class="price">
+          <span class="price-amount" data-monthly="٢٩" data-yearly="٢٥">٢٩</span>
+          <span class="price-currency">ج.م</span>
+          <span class="price-period">/مركبة/شهر</span>
+        </div>
+        <a href="/ar/contact.html" class="btn btn-secondary" style="width:100%; justify-content:center" data-track="demo_requested">اختر هذه الباقة</a>
+      </div>
+
+      <div class="price-tier price-tier-vip">
+        <div class="price-tier-name">VIP الإيليت</div>
+        <div class="price-tier-range">٥٠٠+ مركبة</div>
+        <div class="price">
+          <span class="price-amount" data-monthly="٢٥" data-yearly="٢١">٢٥</span>
+          <span class="price-currency">ج.م</span>
+          <span class="price-period">/مركبة/شهر</span>
+        </div>
+        <a href="/ar/contact.html" class="btn btn-dark" style="width:100%; justify-content:center" data-track="demo_requested">اطلب عرض مخصَّص</a>
+      </div>
+
+    </div>
+
+    <div class="all-included">
+      <h3 class="all-included-title">مزايا مشتركة في كل الباقات</h3>
+      <ul class="all-included-list">
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+          تجربة مجانية ٣٠ يوم بلا رسوم
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+          نظام QR — بدون رسوم بطاقات NFC
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+          تركيب وإعداد مجاني تماماً
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+          خمسة تطبيقات في كل الباقات
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+          فواتير إلكترونية معتمَدة + ضريبة القيمة المضافة
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+          تقارير استهلاك مفصَّلة لكل مركبة وسائق
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+          حماية على ست طبقات ضد الاحتيال
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+          تطبيق ثنائي اللغة — يعمل حتى بدون إنترنت
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+          استيراد جماعي من Excel / CSV
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+          API للربط مع برامج المحاسبة و ERP
+        </li>
+      </ul>
+    </div>
+
+    <p class="muted text-center" style="margin-top:32px; font-size:0.9375rem">محطات الوقود تنضم مجاناً — نربح معاً عندما تتدفَّق أحجام الشركات عبر محطتك.</p>
   </div>
 </section>
 

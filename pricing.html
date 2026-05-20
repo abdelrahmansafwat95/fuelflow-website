@@ -72,62 +72,141 @@
   <div class="container">
     <div class="page-header-inner">
       <span class="persona-tag">Pricing</span>
-      <h1>Priced for fleets that are actually growing.</h1>
-      <p class="lead">Per-vehicle pricing, EGP-denominated, no setup fees. Most customers start with a pilot and roll out once the numbers prove themselves.</p>
+      <h1>FuelFlow plans for managing your fleet's fuel.</h1>
+      <p class="lead">Transparent per-vehicle pricing in EGP — no setup fees, no NFC card fees, and every feature in every plan. Start with a free 30-day pilot.</p>
+      <div class="savings-banner">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><circle cx="12" cy="12" r="10"/><path d="M16 8l-8 8M9 9l.01 0M15 15l.01 0"/></svg>
+        Save up to 40% vs. other Egyptian fuel management systems
+      </div>
     </div>
   </div>
 </section>
 
-<section class="section">
+<section class="section section-tight">
   <div class="container">
-    <div class="pricing-grid">
-      <div class="price-card">
-        <h3>Pilot</h3>
-        <p class="muted" style="margin-bottom:0">For fleets running a controlled rollout</p>
-        <div class="price"><span class="price-currency">EGP</span> 0</div>
-        <div class="price-unit">First 30 days · up to 20 vehicles</div>
-        <ul>
-          <li>Full platform access</li>
-          <li>Up to 20 vehicles</li>
-          <li>Email support</li>
-          <li>Onboarding session included</li>
-        </ul>
-        <a href="/contact.html" class="btn btn-secondary" style="width:100%; justify-content:center" data-track="demo_requested">Start your pilot</a>
-      </div>
-
-      <div class="price-card featured">
-        <div class="ribbon">Most fleets pick this</div>
-        <h3>Scale</h3>
-        <p class="muted" style="margin-bottom:0">For active fleets running real volume</p>
-        <div class="price"><span class="price-currency">EGP</span> 49<span class="price-period">/vehicle/mo</span></div>
-        <div class="price-unit">Volume discount at 100+ vehicles</div>
-        <ul>
-          <li>Unlimited users &amp; stations</li>
-          <li>All five apps included</li>
-          <li>Bulk Excel/CSV import</li>
-          <li>API access for ERP integration</li>
-          <li>Priority support · 8h response</li>
-        </ul>
-        <a href="/contact.html" class="btn btn-primary" style="width:100%; justify-content:center" data-track="demo_requested">Start with Scale</a>
-      </div>
-
-      <div class="price-card">
-        <h3>Enterprise</h3>
-        <p class="muted" style="margin-bottom:0">For multi-region operators (500+ vehicles)</p>
-        <div class="price"><span class="price-currency">From EGP</span> 29<span class="price-period">/vehicle/mo</span></div>
-        <div class="price-unit">Volume-tiered · annual contracts</div>
-        <ul>
-          <li>SLA-grade uptime + dedicated rep</li>
-          <li>Custom RBAC + SSO</li>
-          <li>Direct integrations (FCC, ERP)</li>
-          <li>Security questionnaire response</li>
-          <li>On-site training in Cairo or Alexandria</li>
-        </ul>
-        <a href="/contact.html" class="btn btn-secondary" style="width:100%; justify-content:center" data-track="demo_requested">Request a quote</a>
-      </div>
+    <div class="billing-toggle" role="tablist" aria-label="Billing period">
+      <button class="billing-toggle-btn is-active" type="button" data-billing="monthly" aria-selected="true">Monthly</button>
+      <button class="billing-toggle-btn" type="button" data-billing="yearly" aria-selected="false">Yearly <span class="billing-save">Save 15%</span></button>
     </div>
 
-    <p class="muted text-center" style="margin-top:32px; font-size:0.9375rem">Stations are onboarded at no charge during pilot — we win when corporate volume flows through your forecourt.</p>
+    <div class="pricing-grid-6">
+
+      <div class="price-tier">
+        <div class="price-tier-name">Bronze</div>
+        <div class="price-tier-range">1 – 19 vehicles</div>
+        <div class="price">
+          <span class="price-amount" data-monthly="45" data-yearly="38">45</span>
+          <span class="price-currency">EGP</span>
+          <span class="price-period">/vehicle/mo</span>
+        </div>
+        <a href="/contact.html" class="btn btn-secondary" style="width:100%; justify-content:center" data-track="demo_requested">Choose this plan</a>
+      </div>
+
+      <div class="price-tier">
+        <div class="price-tier-name">Silver</div>
+        <div class="price-tier-range">20 – 49 vehicles</div>
+        <div class="price">
+          <span class="price-amount" data-monthly="39" data-yearly="33">39</span>
+          <span class="price-currency">EGP</span>
+          <span class="price-period">/vehicle/mo</span>
+        </div>
+        <a href="/contact.html" class="btn btn-secondary" style="width:100%; justify-content:center" data-track="demo_requested">Choose this plan</a>
+      </div>
+
+      <div class="price-tier is-featured">
+        <div class="price-tier-ribbon">Most popular</div>
+        <div class="price-tier-name">Gold</div>
+        <div class="price-tier-range">50 – 99 vehicles</div>
+        <div class="price">
+          <span class="price-amount" data-monthly="35" data-yearly="30">35</span>
+          <span class="price-currency">EGP</span>
+          <span class="price-period">/vehicle/mo</span>
+        </div>
+        <a href="/contact.html" class="btn btn-primary" style="width:100%; justify-content:center" data-track="demo_requested">Choose this plan</a>
+      </div>
+
+      <div class="price-tier">
+        <div class="price-tier-name">Platinum</div>
+        <div class="price-tier-range">100 – 249 vehicles</div>
+        <div class="price">
+          <span class="price-amount" data-monthly="32" data-yearly="27">32</span>
+          <span class="price-currency">EGP</span>
+          <span class="price-period">/vehicle/mo</span>
+        </div>
+        <a href="/contact.html" class="btn btn-secondary" style="width:100%; justify-content:center" data-track="demo_requested">Choose this plan</a>
+      </div>
+
+      <div class="price-tier">
+        <div class="price-tier-name">Diamond</div>
+        <div class="price-tier-range">250 – 499 vehicles</div>
+        <div class="price">
+          <span class="price-amount" data-monthly="29" data-yearly="25">29</span>
+          <span class="price-currency">EGP</span>
+          <span class="price-period">/vehicle/mo</span>
+        </div>
+        <a href="/contact.html" class="btn btn-secondary" style="width:100%; justify-content:center" data-track="demo_requested">Choose this plan</a>
+      </div>
+
+      <div class="price-tier price-tier-vip">
+        <div class="price-tier-name">Elite VIP</div>
+        <div class="price-tier-range">500+ vehicles</div>
+        <div class="price">
+          <span class="price-amount" data-monthly="25" data-yearly="21">25</span>
+          <span class="price-currency">EGP</span>
+          <span class="price-period">/vehicle/mo</span>
+        </div>
+        <a href="/contact.html" class="btn btn-dark" style="width:100%; justify-content:center" data-track="demo_requested">Request custom quote</a>
+      </div>
+
+    </div>
+
+    <div class="all-included">
+      <h3 class="all-included-title">Included in every plan</h3>
+      <ul class="all-included-list">
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+          Free 30-day pilot — no charge
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+          QR-based — no NFC card fees
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+          Zero setup or installation cost
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+          All five apps in every plan
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+          E-invoicing + VAT-compliant receipts
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+          Detailed consumption reports per vehicle &amp; driver
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+          6-layer fraud protection
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+          Bilingual app — works offline
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+          Bulk Excel / CSV import
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+          API for accounting and ERP integration
+        </li>
+      </ul>
+    </div>
+
+    <p class="muted text-center" style="margin-top:32px; font-size:0.9375rem">Fuel stations onboard at no charge — we win together as corporate volume flows through your forecourt.</p>
   </div>
 </section>
 
