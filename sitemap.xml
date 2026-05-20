@@ -1,71 +1,192 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://fuelflow.eg/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://fuelflow.eg/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://fuelflow.eg/ar/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://fuelflow.eg/"/>
-    <changefreq>weekly</changefreq><priority>1.0</priority>
+    <image:image>
+      <image:loc>https://fuelflow.eg/assets/og-cover.png</image:loc>
+      <image:title>FuelFlow — cashless fuel management for Egyptian fleets</image:title>
+      <image:caption>Cashless fuel management platform built in Egypt, for Egypt.</image:caption>
+    </image:image>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://fuelflow.eg/ar/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fuelflow.eg/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://fuelflow.eg/ar/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fuelflow.eg/"/>
+    <image:image>
+      <image:loc>https://fuelflow.eg/assets/og-cover.png</image:loc>
+      <image:title>فيول فلو — إدارة الوقود اللاتلامسية لأساطيل مصر</image:title>
+    </image:image>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
   </url>
   <url>
     <loc>https://fuelflow.eg/for-fleets.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://fuelflow.eg/for-fleets.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://fuelflow.eg/ar/for-fleets.html"/>
-    <changefreq>monthly</changefreq><priority>0.9</priority>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://fuelflow.eg/ar/for-fleets.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fuelflow.eg/for-fleets.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://fuelflow.eg/ar/for-fleets.html"/>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://fuelflow.eg/for-stations.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://fuelflow.eg/for-stations.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://fuelflow.eg/ar/for-stations.html"/>
-    <changefreq>monthly</changefreq><priority>0.9</priority>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://fuelflow.eg/ar/for-stations.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fuelflow.eg/for-stations.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://fuelflow.eg/ar/for-stations.html"/>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://fuelflow.eg/drivers.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://fuelflow.eg/drivers.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://fuelflow.eg/ar/drivers.html"/>
-    <changefreq>monthly</changefreq><priority>0.8</priority>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fuelflow.eg/ar/drivers.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fuelflow.eg/drivers.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://fuelflow.eg/ar/drivers.html"/>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://fuelflow.eg/how-it-works.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://fuelflow.eg/how-it-works.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://fuelflow.eg/ar/how-it-works.html"/>
-    <changefreq>monthly</changefreq><priority>0.8</priority>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fuelflow.eg/ar/how-it-works.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fuelflow.eg/how-it-works.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://fuelflow.eg/ar/how-it-works.html"/>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://fuelflow.eg/security.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://fuelflow.eg/security.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://fuelflow.eg/ar/security.html"/>
-    <changefreq>monthly</changefreq><priority>0.8</priority>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fuelflow.eg/ar/security.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fuelflow.eg/security.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://fuelflow.eg/ar/security.html"/>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://fuelflow.eg/pricing.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://fuelflow.eg/pricing.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://fuelflow.eg/ar/pricing.html"/>
-    <changefreq>monthly</changefreq><priority>0.7</priority>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fuelflow.eg/ar/pricing.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fuelflow.eg/pricing.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://fuelflow.eg/ar/pricing.html"/>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://fuelflow.eg/about.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://fuelflow.eg/about.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://fuelflow.eg/ar/about.html"/>
-    <changefreq>monthly</changefreq><priority>0.6</priority>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://fuelflow.eg/ar/about.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fuelflow.eg/about.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://fuelflow.eg/ar/about.html"/>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://fuelflow.eg/contact.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://fuelflow.eg/contact.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://fuelflow.eg/ar/contact.html"/>
-    <changefreq>monthly</changefreq><priority>0.8</priority>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fuelflow.eg/ar/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fuelflow.eg/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://fuelflow.eg/ar/contact.html"/>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://fuelflow.eg/legal/privacy.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://fuelflow.eg/legal/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://fuelflow.eg/ar/legal/privacy.html"/>
-    <changefreq>yearly</changefreq><priority>0.3</priority>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://fuelflow.eg/ar/legal/privacy.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fuelflow.eg/legal/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://fuelflow.eg/ar/legal/privacy.html"/>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
   <url>
     <loc>https://fuelflow.eg/legal/terms.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://fuelflow.eg/legal/terms.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://fuelflow.eg/ar/legal/terms.html"/>
-    <changefreq>yearly</changefreq><priority>0.3</priority>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://fuelflow.eg/ar/legal/terms.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fuelflow.eg/legal/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://fuelflow.eg/ar/legal/terms.html"/>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
 </urlset>
