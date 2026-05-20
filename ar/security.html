@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>الأمان والامتثال — فيول فلو</title>
+<meta name="description" content="كيف يحمي فيول فلو المصادقة، الجلسات، البيانات، العمليات، والميزانيات. متوافق مع توجيهات البنك المركزي المصري." />
+<link rel="canonical" href="https://fuelflow.eg/ar/security.html" />
+<link rel="alternate" hreflang="ar" href="https://fuelflow.eg/ar/security.html" />
+<link rel="alternate" hreflang="en" href="https://fuelflow.eg/security.html" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+<link rel="stylesheet" href="/assets/styles.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav">
+    <a href="/ar/" class="brand"><span class="brand-mark">F</span><span>فيول فلو</span></a>
+    <nav>
+      <ul class="nav-links" id="nav-menu">
+        <li><a href="/ar/for-fleets.html">للأساطيل</a></li>
+        <li><a href="/ar/for-stations.html">للمحطات</a></li>
+        <li><a href="/ar/drivers.html">للسائقين</a></li>
+        <li><a href="/ar/how-it-works.html">كيف يعمل</a></li>
+        <li><a href="/ar/security.html" aria-current="page">الأمان</a></li>
+        <li><a href="/ar/pricing.html">الأسعار</a></li>
+        <li><a href="/ar/about.html">من نحن</a></li>
+      </ul>
+    </nav>
+    <div class="nav-cta">
+      <a class="lang-switch" href="/security.html" data-track="language_switched">English</a>
+      <a class="btn btn-primary" href="/ar/contact.html" data-track="demo_requested">احجز عرضاً</a>
+      <button class="nav-toggle" aria-label="القائمة"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<section class="page-header">
+  <div class="container">
+    <div class="page-header-inner">
+      <span class="persona-tag">للمشتريات وتكنولوجيا المعلومات</span>
+      <h1>الثقة، بالتصميم.</h1>
+      <p class="lead">فيول فلو يتعامل مع المال، الهوية، والوقود. هذه هي البنية التي بنيناها لحماية الثلاثة — مكتوبة لتنهي مراجعة الأمان فعلاً.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container" style="max-width:880px">
+
+    <div class="sec-card">
+      <h3>المصادقة <span class="badge">OTP بالهاتف</span></h3>
+      <p>كود تحقق SMS لكل دخول — ٦ أرقام، مشفر بـ bcrypt، صلاحية ٥ دقائق. قفل بعد ٥ محاولات خاطئة خلال ١٥ دقيقة. بلا كلمات سر يعني بلا إعادة استخدام.</p>
+    </div>
+
+    <div class="sec-card">
+      <h3>الجلسات <span class="badge">JWT + تدوير</span></h3>
+      <p>رموز JWT قصيرة (١٥ دقيقة)، رموز تجديد طويلة مع تدوير على الخادم. الرموز المخترقة تُلغى عند الاستخدام التالي بفضل كشف إعادة الاستخدام.</p>
+    </div>
+
+    <div class="sec-card">
+      <h3>حماية البيانات <span class="badge">TLS · AES-256</span></h3>
+      <p>TLS 1.2+ مفروض على كل نقاط النهاية الخارجية، مع HSTS preload. البيانات الشخصية مشفرة بـ AES-256-GCM. كلمات السر بـ bcrypt (تكلفة ١٠). النسخ الاحتياطية مشفرة بمفاتيح منفصلة.</p>
+    </div>
+
+    <div class="sec-card">
+      <h3>أمان العمليات <span class="badge">٦ طبقات</span></h3>
+      <p>كل طلب اعتماد يمر على القواعد الست بالتوازي:</p>
+      <ul>
+        <li><strong>السرعة</strong> — تعبئات كثيرة في وقت قصير</li>
+        <li><strong>القفز الجغرافي</strong> — مسافة مستحيلة بين محطتين</li>
+        <li><strong>التكرار</strong> — نفس المضخة والسيارة في نافذة قصيرة</li>
+        <li><strong>كميات مبالغ بها</strong> — أكثر من سعة الخزان</li>
+        <li><strong>قيود ساعية</strong> — استخدام خارج ساعات العمل المتوقعة</li>
+        <li><strong>مركبة جديدة</strong> — تدقيق خاص على أول عمليات للمركبات الجديدة</li>
+      </ul>
+    </div>
+
+    <div class="sec-card">
+      <h3>سلامة الميزانية <span class="badge">أقفال ذرية</span></h3>
+      <p>حجز الميزانية يستخدم أقفال Redis لمنع الصرف المزدوج. الخصم الفعلي يجري داخل عملية Postgres ذرية. لا تعارض، أبداً.</p>
+    </div>
+
+    <div class="sec-card">
+      <h3>سجل التدقيق <span class="badge">غير قابل للتعديل</span></h3>
+      <p>كل تغيير — ميزانية، مركبة، سائق، محطة، صلاحية، سعر — يكتب سجلاً مع الفاعل، الوقت، وقبل/بعد. السجلات أحادية الإضافة وتُحفظ للمراجعات.</p>
+    </div>
+
+    <div class="sec-card">
+      <h3>التحكم في الوصول <span class="badge">RBAC</span></h3>
+      <p>صلاحيات على مستوى قاعدة البيانات، لكل دور ولكل ميزة. قابلة للضبط من قبل المشرف الأعلى فقط. أدوار القراءة فقط مدعومة من الأساس.</p>
+    </div>
+
+    <div class="sec-card">
+      <h3>الامتثال المصري <span class="badge">CBE-aligned</span></h3>
+      <p>بنية متوافقة مع توجيهات البنك المركزي المصري للتقنيات المالية. البيانات تبقى داخل مصر. فواتير متوافقة ضريبياً. السجلات تُحفظ حسب المتطلبات المحلية.</p>
+    </div>
+
+    <div class="sec-card">
+      <h3>الإفصاح المسؤول <span class="badge">security@</span></h3>
+      <p>وجدت ثغرة؟ راسل <a href="mailto:security@fuelflow.eg">security@fuelflow.eg</a> مع خطوات الإنتاج. نرد خلال يوم عمل، وننسب الفضل للباحثين بحسن نية.</p>
+    </div>
+
+  </div>
+</section>
+
+<section class="section" style="background:var(--color-surface)">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">العمليات</span>
+      <h2>مصمم ليستمر شغّالاً.</h2>
+    </div>
+    <div class="grid-3">
+      <div class="card"><h4>المراقبة</h4><p>Prometheus + Grafana على كل خدمة. تنبيهات على زمن الاستجابة وأخطاء النظام.</p></div>
+      <div class="card"><h4>النسخ الاحتياطي</h4><p>نسخ يومية، استعادة لـ ٧ أيام، أرشيف شهري خارج الموقع.</p></div>
+      <div class="card"><h4>الاستجابة للحوادث</h4><p>فريق متاح ٢٤/٧. خطة تواصل واضحة. صفحة حالة عامة قيد التطوير.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="cta-banner">
+      <h2>تحتاج استبيان أمان كامل؟</h2>
+      <p>لدينا رد مفصل جاهز لفرق المشتريات. اطلب وسنرسله.</p>
+      <div class="btn-group">
+        <a href="mailto:security@fuelflow.eg" class="btn btn-primary btn-lg">راسل security@</a>
+        <a href="/ar/contact.html" class="btn btn-secondary btn-lg">تحدث مع المبيعات ←</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><a href="/ar/" class="brand"><span class="brand-mark">F</span><span>فيول فلو</span></a><p>إدارة الوقود اللاتلامسية لأساطيل الشركات المصرية.</p></div>
+      <div class="footer-col"><h5>المنتج</h5><ul><li><a href="/ar/for-fleets.html">للأساطيل</a></li><li><a href="/ar/for-stations.html">للمحطات</a></li><li><a href="/ar/drivers.html">تطبيق السائق</a></li><li><a href="/ar/how-it-works.html">كيف يعمل</a></li><li><a href="/ar/pricing.html">الأسعار</a></li></ul></div>
+      <div class="footer-col"><h5>الشركة</h5><ul><li><a href="/ar/about.html">من نحن</a></li><li><a href="/ar/contact.html">تواصل</a></li><li><a href="/ar/security.html">الأمان</a></li></ul></div>
+      <div class="footer-col"><h5>قانوني</h5><ul><li><a href="/ar/legal/privacy.html">الخصوصية</a></li><li><a href="/ar/legal/terms.html">الشروط</a></li></ul></div>
+      <div class="footer-col"><h5>اللغة</h5><ul><li><a href="/">English</a></li><li><a href="/ar/">العربية</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><div>© ٢٠٢٦ فيول فلو.</div><div class="links"><a href="mailto:sales@fuelflow.eg">sales@fuelflow.eg</a><a href="/ar/legal/privacy.html">الخصوصية</a><a href="/ar/legal/terms.html">الشروط</a></div></div>
+  </div>
+</footer>
+
+<a href="https://wa.me/201000000000" class="fab-whatsapp" data-track="whatsapp_clicked" aria-label="واتساب" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448L.057 24z"/></svg></a>
+
+<script src="/assets/script.js" defer></script>
+</body>
+</html>

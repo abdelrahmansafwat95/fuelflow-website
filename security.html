@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Security &amp; Compliance — FuelFlow</title>
+<meta name="description" content="How FuelFlow secures authentication, sessions, data at rest and in transit, transactions, and budgets. Aligned with Central Bank of Egypt fintech guidelines." />
+<link rel="canonical" href="https://fuelflow.eg/security.html" />
+<link rel="alternate" hreflang="en" href="https://fuelflow.eg/security.html" />
+<link rel="alternate" hreflang="ar" href="https://fuelflow.eg/ar/security.html" />
+<meta property="og:title" content="FuelFlow security and compliance" />
+<meta property="og:description" content="Bank-grade security, Egypt data residency, CBE-aligned." />
+<meta property="og:url" content="https://fuelflow.eg/security.html" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+<link rel="stylesheet" href="/assets/styles.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav">
+    <a href="/" class="brand"><span class="brand-mark">F</span><span>FuelFlow</span></a>
+    <nav aria-label="Primary">
+      <ul class="nav-links" id="nav-menu">
+        <li><a href="/for-fleets.html">For Fleets</a></li>
+        <li><a href="/for-stations.html">For Stations</a></li>
+        <li><a href="/drivers.html">Drivers</a></li>
+        <li><a href="/how-it-works.html">How it works</a></li>
+        <li><a href="/security.html" aria-current="page">Security</a></li>
+        <li><a href="/pricing.html">Pricing</a></li>
+        <li><a href="/about.html">About</a></li>
+      </ul>
+    </nav>
+    <div class="nav-cta">
+      <a class="lang-switch" href="/ar/security.html" data-track="language_switched">العربية</a>
+      <a class="btn btn-primary" href="/contact.html" data-track="demo_requested"><span class="btn-text-hide">Book a</span> demo</a>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="nav-menu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<section class="page-header">
+  <div class="container">
+    <div class="page-header-inner">
+      <span class="persona-tag">For procurement &amp; IT</span>
+      <h1>Trust, by design.</h1>
+      <p class="lead">FuelFlow handles money, identity, and fuel. Here's the architecture we built to keep all three safe — written so your security review actually finishes.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container" style="max-width:880px">
+
+    <div class="sec-card">
+      <h3>Authentication <span class="badge">Phone OTP</span></h3>
+      <p>SMS OTP for every login — 6 digits, bcrypt-hashed in storage, 5-minute TTL. Brute-force lockout kicks in after 5 wrong attempts within 15 minutes. No passwords means no password reuse.</p>
+    </div>
+
+    <div class="sec-card">
+      <h3>Sessions <span class="badge">JWT + rotation</span></h3>
+      <p>Short-lived JWT access tokens (15 min), long-lived refresh tokens with server-side rotation. Compromised refresh tokens are revoked on next use thanks to reuse detection. Logout is server-authoritative.</p>
+    </div>
+
+    <div class="sec-card">
+      <h3>Data protection <span class="badge">TLS 1.2+ · AES-256</span></h3>
+      <p>TLS 1.2+ enforced on every external endpoint, with HSTS preload. PII at rest is encrypted with AES-256-GCM. Passwords use bcrypt (cost 10). Database backups are encrypted with separate keys.</p>
+    </div>
+
+    <div class="sec-card">
+      <h3>Transaction security <span class="badge">6-layer fraud</span></h3>
+      <p>Every authorization request hits all six rules in parallel:</p>
+      <ul>
+        <li><strong>Velocity</strong> — too many fills in too little time per vehicle or driver</li>
+        <li><strong>Geo-jump</strong> — physically impossible distance between consecutive stations</li>
+        <li><strong>Duplicate</strong> — same pump + same vehicle within a short window</li>
+        <li><strong>Excessive litres</strong> — amount above the vehicle's tank capacity</li>
+        <li><strong>Hourly cap</strong> — usage outside expected operating hours</li>
+        <li><strong>New vehicle</strong> — extra scrutiny on the first transactions for a newly added vehicle</li>
+      </ul>
+    </div>
+
+    <div class="sec-card">
+      <h3>Budget integrity <span class="badge">Atomic locks</span></h3>
+      <p>Budget reservations use Redis distributed locks to prevent double-spend across concurrent authorizations. The actual deduction is committed inside an atomic Postgres transaction. No race conditions, ever.</p>
+    </div>
+
+    <div class="sec-card">
+      <h3>Audit trail <span class="badge">Immutable</span></h3>
+      <p>Every entity change — budget, vehicle, driver, station, role, price — writes an audit log entry with actor, timestamp, and full before/after. Audit logs are append-only and retained for compliance review.</p>
+    </div>
+
+    <div class="sec-card">
+      <h3>Access control <span class="badge">RBAC</span></h3>
+      <p>Database-driven, per-role, per-feature permissions. Configurable by super-admin only. Read-only roles are first-class. Two-person rule available on sensitive operations like bulk budget changes.</p>
+    </div>
+
+    <div class="sec-card">
+      <h3>Egypt compliance <span class="badge">CBE-aligned</span></h3>
+      <p>Architecture aligned with Central Bank of Egypt fintech guidelines. Data residency in-country. Tax-compliant invoice generation. Audit logs retained per local requirements.</p>
+    </div>
+
+    <div class="sec-card">
+      <h3>Responsible disclosure <span class="badge">security@</span></h3>
+      <p>Found a vulnerability? Email <a href="mailto:security@fuelflow.eg">security@fuelflow.eg</a> with reproduction steps. We respond within one business day, credit researchers in our hall of fame, and don't pursue good-faith reporters.</p>
+    </div>
+
+  </div>
+</section>
+
+<section class="section" style="background:var(--color-surface)">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Operational</span>
+      <h2>Built to stay up.</h2>
+    </div>
+    <div class="grid-3">
+      <div class="card">
+        <h4>Monitoring</h4>
+        <p>Prometheus + Grafana on every service. Alerts on latency, error rate, queue depth.</p>
+      </div>
+      <div class="card">
+        <h4>Backups</h4>
+        <p>Daily snapshots, point-in-time recovery for the last 7 days, monthly archives held off-site.</p>
+      </div>
+      <div class="card">
+        <h4>Incident response</h4>
+        <p>On-call rotation 24/7. Defined comms playbook. Public status page on the roadmap.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="cta-banner">
+      <h2>Need our full security questionnaire?</h2>
+      <p>We've got a long-form response ready for procurement teams. Ask and we'll send it.</p>
+      <div class="btn-group">
+        <a href="mailto:security@fuelflow.eg" class="btn btn-primary btn-lg">Email security@</a>
+        <a href="/contact.html" class="btn btn-secondary btn-lg">Talk to sales →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><a href="/" class="brand"><span class="brand-mark">F</span><span>FuelFlow</span></a><p>Cashless fuel management for Egyptian corporate fleets.</p></div>
+      <div class="footer-col"><h5>Product</h5><ul><li><a href="/for-fleets.html">For Fleets</a></li><li><a href="/for-stations.html">For Stations</a></li><li><a href="/drivers.html">Driver App</a></li><li><a href="/how-it-works.html">How it works</a></li><li><a href="/pricing.html">Pricing</a></li></ul></div>
+      <div class="footer-col"><h5>Company</h5><ul><li><a href="/about.html">About</a></li><li><a href="/contact.html">Contact</a></li><li><a href="/security.html">Security</a></li></ul></div>
+      <div class="footer-col"><h5>Legal</h5><ul><li><a href="/legal/privacy.html">Privacy</a></li><li><a href="/legal/terms.html">Terms</a></li></ul></div>
+      <div class="footer-col"><h5>Language</h5><ul><li><a href="/">English</a></li><li><a href="/ar/">العربية</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><div>© 2026 FuelFlow.</div><div class="links"><a href="mailto:sales@fuelflow.eg">sales@fuelflow.eg</a><a href="/legal/privacy.html">Privacy</a><a href="/legal/terms.html">Terms</a></div></div>
+  </div>
+</footer>
+
+<a href="https://wa.me/201000000000" class="fab-whatsapp" data-track="whatsapp_clicked" aria-label="Chat on WhatsApp" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448L.057 24z"/></svg></a>
+
+<script src="/assets/script.js" defer></script>
+</body>
+</html>
