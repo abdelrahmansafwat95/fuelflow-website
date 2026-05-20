@@ -15,6 +15,18 @@
   --color-surface-2: #EEF2F8;
   --color-border: #E5EAF0;
   --color-border-strong: #CDD5E1;
+  /* Immutable brand colors — used for backgrounds that must stay dark navy in both themes */
+  --color-brand: #0A1B2E;
+  --color-brand-light: #142A47;
+  --color-brand-dark: #050F1E;
+  /* Theme-flippable surfaces */
+  --color-card: #FFFFFF;
+  --color-header-bg: rgba(255, 255, 255, 0.92);
+  --color-mock-bg: #FFFFFF;
+  --color-mock-surface: #F7F9FC;
+  --color-mock-text: #0A1B2E;
+  --color-mock-text-muted: #5B6478;
+  --color-mock-border: #E5EAF0;
   --color-success: #0E9F6E;
   --color-warning: #F59E0B;
   --color-danger: #E03131;
@@ -203,11 +215,11 @@ code {
 }
 
 .btn-dark {
-  background: var(--color-primary);
+  background: var(--color-brand);
   color: #fff;
 }
 .btn-dark:hover {
-  background: var(--color-primary-light);
+  background: var(--color-brand-light);
   color: #fff;
 }
 
@@ -230,7 +242,7 @@ code {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(255, 255, 255, 0.92);
+  background: var(--color-header-bg);
   backdrop-filter: saturate(180%) blur(12px);
   -webkit-backdrop-filter: saturate(180%) blur(12px);
   border-bottom: 1px solid var(--color-border);
@@ -258,7 +270,6 @@ code {
   height: 40px;
   width: auto;
   display: block;
-  border-radius: 6px;
 }
 
 .footer-brand .brand-logo {
@@ -300,7 +311,7 @@ code {
   font-weight: 600;
   color: var(--color-text-muted);
   border: 1px solid var(--color-border);
-  background: #fff;
+  background: var(--color-card);
 }
 .lang-switch:hover {
   color: var(--color-primary);
@@ -326,7 +337,7 @@ code {
     flex-direction: column;
     align-items: stretch;
     padding: 16px;
-    background: #fff;
+    background: var(--color-card);
     border: 1px solid var(--color-border);
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-lg);
@@ -403,17 +414,17 @@ code {
 .mock-dashboard {
   position: absolute;
   inset: 0 0 16% 8%;
-  background: #fff;
+  background: var(--color-mock-bg);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-xl);
-  border: 1px solid var(--color-border);
+  border: 1px solid var(--color-mock-border);
   overflow: hidden;
   transform: rotate(-1deg);
 }
 .mock-dashboard .mock-bar {
   height: 28px;
-  background: var(--color-surface);
-  border-bottom: 1px solid var(--color-border);
+  background: var(--color-mock-surface);
+  border-bottom: 1px solid var(--color-mock-border);
   display: flex;
   align-items: center;
   padding: 0 12px;
@@ -433,17 +444,17 @@ code {
   gap: 12px;
 }
 .mock-card {
-  background: var(--color-surface);
+  background: var(--color-mock-surface);
   border-radius: var(--radius-md);
   padding: 14px;
-  border: 1px solid var(--color-border);
+  border: 1px solid var(--color-mock-border);
 }
-.mock-card .label { font-size: 11px; color: var(--color-text-muted); text-transform: uppercase; letter-spacing: 0.05em; }
-.mock-card .value { font-size: 20px; font-weight: 700; color: var(--color-primary); margin-top: 4px; }
+.mock-card .label { font-size: 11px; color: var(--color-mock-text-muted); text-transform: uppercase; letter-spacing: 0.05em; }
+.mock-card .value { font-size: 20px; font-weight: 700; color: var(--color-mock-text); margin-top: 4px; }
 .mock-card.full { grid-column: 1 / -1; }
 .mock-row {
   display: flex; justify-content: space-between; align-items: center;
-  padding: 8px 0; border-bottom: 1px dashed var(--color-border); font-size: 13px;
+  padding: 8px 0; border-bottom: 1px dashed var(--color-mock-border); font-size: 13px; color: var(--color-mock-text);
 }
 .mock-row:last-child { border-bottom: 0; }
 .mock-pill {
@@ -457,11 +468,11 @@ code {
   aspect-ratio: 9 / 19;
   right: -2%;
   bottom: -4%;
-  background: var(--color-primary);
+  background: var(--color-brand);
   border-radius: 28px;
   padding: 8px;
   box-shadow: var(--shadow-xl);
-  border: 3px solid var(--color-primary-dark);
+  border: 3px solid var(--color-brand-dark);
   transform: rotate(6deg);
 }
 body[dir="rtl"] .mock-phone { right: auto; left: -2%; transform: rotate(-6deg); }
@@ -491,7 +502,7 @@ body[dir="rtl"] .mock-dashboard { transform: rotate(1deg); }
   content: '';
   position: absolute;
   inset: 30%;
-  background: var(--color-primary);
+  background: var(--color-brand);
   border-radius: 6px;
 }
 .mock-phone-label { font-size: 12px; opacity: 0.7; }
@@ -528,7 +539,7 @@ body[dir="rtl"] .mock-dashboard { transform: rotate(1deg); }
   align-items: center;
   gap: 8px;
   padding: 8px 14px;
-  background: #fff;
+  background: var(--color-card);
   border: 1px solid var(--color-border);
   border-radius: 999px;
   font-size: 0.8125rem;
@@ -563,7 +574,7 @@ body[dir="rtl"] .mock-dashboard { transform: rotate(1deg); }
 }
 
 .card {
-  background: #fff;
+  background: var(--color-card);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   padding: 28px;
@@ -591,7 +602,7 @@ body[dir="rtl"] .mock-dashboard { transform: rotate(1deg); }
 .card-num {
   width: 36px; height: 36px;
   border-radius: 50%;
-  background: var(--color-primary);
+  background: var(--color-brand);
   color: var(--color-accent);
   font-weight: 700;
   display: grid;
@@ -601,7 +612,7 @@ body[dir="rtl"] .mock-dashboard { transform: rotate(1deg); }
 
 /* Ecosystem */
 .ecosystem {
-  background: var(--color-primary);
+  background: var(--color-brand);
   color: #fff;
   border-radius: var(--radius-xl);
   padding: 56px;
@@ -722,7 +733,7 @@ body[dir="rtl"] .mock-dashboard { transform: rotate(1deg); }
 
 /* Testimonials */
 .quote-card {
-  background: #fff;
+  background: var(--color-card);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   padding: 32px;
@@ -760,7 +771,7 @@ body[dir="rtl"] .mock-dashboard { transform: rotate(1deg); }
 /* CTA banner */
 .cta-banner {
   text-align: center;
-  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+  background: linear-gradient(135deg, var(--color-brand) 0%, var(--color-brand-light) 100%);
   color: #fff;
   border-radius: var(--radius-xl);
   padding: 64px 32px;
@@ -786,7 +797,7 @@ body[dir="rtl"] .mock-dashboard { transform: rotate(1deg); }
 
 /* Footer */
 .site-footer {
-  background: var(--color-primary-dark);
+  background: var(--color-brand-dark);
   color: rgba(255, 255, 255, 0.7);
   padding: 64px 0 32px;
   margin-top: 0;
@@ -947,7 +958,7 @@ body[dir="rtl"] .pain-list li {
 .flow-num {
   width: 56px; height: 56px;
   border-radius: 50%;
-  background: var(--color-primary);
+  background: var(--color-brand);
   color: var(--color-accent);
   display: grid; place-items: center;
   font-size: 1.25rem; font-weight: 700;
@@ -977,7 +988,7 @@ body[dir="rtl"] .pain-list li {
 /* Security list */
 .sec-card {
   border: 1px solid var(--color-border);
-  background: #fff;
+  background: var(--color-card);
   border-radius: var(--radius-lg);
   padding: 28px;
   margin-bottom: 16px;
@@ -1010,7 +1021,7 @@ body[dir="rtl"] .pain-list li {
 @media (max-width: 960px) { .contact-grid { grid-template-columns: 1fr; gap: 32px; } }
 
 .form {
-  background: #fff;
+  background: var(--color-card);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   padding: 32px;
@@ -1041,7 +1052,7 @@ body[dir="rtl"] .pain-list li {
   font-size: 1rem;
   font-family: inherit;
   color: var(--color-text);
-  background: #fff;
+  background: var(--color-card);
   transition: border-color var(--transition), box-shadow var(--transition);
 }
 .form-field input:focus,
@@ -1055,7 +1066,7 @@ body[dir="rtl"] .pain-list li {
 .honeypot { position: absolute; left: -9999px; opacity: 0; }
 
 .contact-aside {
-  background: var(--color-primary);
+  background: var(--color-brand);
   color: #fff;
   border-radius: var(--radius-lg);
   padding: 32px;
@@ -1093,13 +1104,13 @@ body[dir="rtl"] .pain-list li {
   align-items: center;
   gap: 10px;
   padding: 10px 18px;
-  background: var(--color-primary);
+  background: var(--color-brand);
   color: #fff;
   border-radius: var(--radius-md);
   text-decoration: none;
   transition: all var(--transition);
 }
-.app-badge:hover { background: var(--color-primary-light); color: #fff; transform: translateY(-1px); }
+.app-badge:hover { background: var(--color-brand-light); color: #fff; transform: translateY(-1px); }
 .app-badge .badge-small { font-size: 11px; opacity: 0.8; line-height: 1; }
 .app-badge .badge-large { font-size: 14px; font-weight: 700; line-height: 1.1; }
 .app-badge svg { width: 26px; height: 26px; }
@@ -1115,15 +1126,15 @@ body[dir="rtl"] .pain-list li {
   .phone-gallery { grid-template-columns: 1fr; max-width: 280px; margin: 0 auto; }
 }
 .phone-frame {
-  background: var(--color-primary);
+  background: var(--color-brand);
   border-radius: 28px;
   padding: 8px;
-  border: 3px solid var(--color-primary-dark);
+  border: 3px solid var(--color-brand-dark);
   aspect-ratio: 9 / 19;
   box-shadow: var(--shadow-lg);
 }
 .phone-screen {
-  background: linear-gradient(180deg, var(--color-primary-light) 0%, var(--color-primary) 100%);
+  background: linear-gradient(180deg, var(--color-brand-light) 0%, var(--color-brand) 100%);
   border-radius: 22px;
   height: 100%;
   display: flex;
@@ -1154,7 +1165,7 @@ body[dir="rtl"] .pain-list li {
 @media (max-width: 960px) { .pricing-grid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; } }
 
 .price-card {
-  background: #fff;
+  background: var(--color-card);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   padding: 32px;
@@ -1292,16 +1303,34 @@ body[dir="rtl"] .hero-meta span::before { margin-inline-end: 0; margin-inline-st
 [data-theme="dark"] .theme-toggle .theme-icon-sun { display: block; }
 [data-theme="dark"] .theme-toggle .theme-icon-moon { display: none; }
 
-/* ---------- Dark Mode ---------- */
+/* ---------- Dark Mode ----------
+   Tokens fully redefined for dark theme. Light-mode tokens are left
+   untouched; only --color-brand*, --color-mock-*, and --color-accent
+   stay shared (they're brand colors, intentionally identical in both
+   themes). Everything else flips here. */
+
 [data-theme="dark"] {
+  /* Text: primary = main text/headings, used by h1-h5, .brand,
+     .nav-toggle, .btn-secondary, .btn-ghost, code, etc. */
+  --color-primary: #F2F6FB;
+  --color-primary-light: #FFFFFF;
+  --color-primary-dark: #C5CFE0;
+
+  /* Body / muted text */
   --color-text: #E5EAF0;
-  --color-text-muted: #95A3BD;
-  --color-text-light: #6F7E99;
+  --color-text-muted: #A7B5CC;
+  --color-text-light: #7B8AA6;
+
+  /* Surfaces */
   --color-bg: #0A1B2E;
   --color-surface: #122845;
   --color-surface-2: #1B355A;
-  --color-border: #1F3556;
-  --color-border-strong: #2B4470;
+  --color-card: #122845;
+  --color-header-bg: rgba(10, 27, 46, 0.88);
+
+  /* Borders */
+  --color-border: #213A60;
+  --color-border-strong: #2F4D7B;
 
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.30);
   --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.35);
@@ -1309,68 +1338,7 @@ body[dir="rtl"] .hero-meta span::before { margin-inline-end: 0; margin-inline-st
   --shadow-xl: 0 24px 60px rgba(0, 0, 0, 0.55);
 }
 
-[data-theme="dark"] body { color: var(--color-text); background: var(--color-bg); }
-
-[data-theme="dark"] h1,
-[data-theme="dark"] h2,
-[data-theme="dark"] h3,
-[data-theme="dark"] h4,
-[data-theme="dark"] h5 { color: #FFFFFF; }
-
-[data-theme="dark"] p { color: var(--color-text-muted); }
-[data-theme="dark"] p.lead { color: var(--color-text); }
-[data-theme="dark"] ul, [data-theme="dark"] ol { color: var(--color-text-muted); }
-
-[data-theme="dark"] a { color: var(--color-accent); }
-[data-theme="dark"] a:hover { color: var(--color-accent-light); }
-
-[data-theme="dark"] code {
-  background: var(--color-surface-2);
-  color: var(--color-accent-light);
-}
-
-[data-theme="dark"] .site-header {
-  background: rgba(10, 27, 46, 0.85);
-  border-bottom-color: var(--color-border);
-}
-
-[data-theme="dark"] .brand { color: var(--color-text); }
-[data-theme="dark"] .nav-links a { color: var(--color-text); }
-[data-theme="dark"] .nav-links a:hover { color: var(--color-accent); }
-
-[data-theme="dark"] .lang-switch {
-  background: var(--color-surface);
-  color: var(--color-text-muted);
-  border-color: var(--color-border);
-}
-[data-theme="dark"] .lang-switch:hover {
-  color: var(--color-text);
-  border-color: var(--color-accent);
-}
-
-[data-theme="dark"] .nav-links.open {
-  background: var(--color-surface);
-  border-color: var(--color-border);
-}
-[data-theme="dark"] .nav-links a:hover { background: var(--color-surface-2); }
-
-[data-theme="dark"] .btn-secondary {
-  color: var(--color-text);
-  border-color: var(--color-border-strong);
-}
-[data-theme="dark"] .btn-secondary:hover {
-  border-color: var(--color-accent);
-  color: var(--color-accent);
-  background: var(--color-surface);
-}
-[data-theme="dark"] .btn-ghost { color: var(--color-text); }
-[data-theme="dark"] .btn-ghost:hover { background: var(--color-surface); }
-[data-theme="dark"] .btn-dark {
-  background: var(--color-surface-2);
-  color: #fff;
-}
-[data-theme="dark"] .btn-dark:hover { background: var(--color-border-strong); }
-
+/* Hero radial gradient uses raw rgba — re-tune for dark canvas */
 [data-theme="dark"] .hero {
   background:
     radial-gradient(1100px 600px at 20% -10%, rgba(29, 168, 255, 0.18), transparent 60%),
@@ -1378,17 +1346,14 @@ body[dir="rtl"] .hero-meta span::before { margin-inline-end: 0; margin-inline-st
     var(--color-bg);
 }
 
-[data-theme="dark"] .trust-badge,
-[data-theme="dark"] .quote-card,
-[data-theme="dark"] .sec-card,
-[data-theme="dark"] .form,
-[data-theme="dark"] input,
-[data-theme="dark"] select,
-[data-theme="dark"] textarea {
-  background: var(--color-surface);
-  color: var(--color-text);
-  border-color: var(--color-border);
+/* Header semi-transparent backdrop */
+[data-theme="dark"] .site-header {
+  background: var(--color-header-bg);
+  border-bottom-color: var(--color-border);
 }
+
+/* Buttons that should remain navy (.btn-dark uses --color-brand, fine)
+   .btn-primary hover boost reuses the same brand accent. */
 
 [data-theme="dark"] input::placeholder,
 [data-theme="dark"] textarea::placeholder { color: var(--color-text-light); }
@@ -1398,8 +1363,11 @@ body[dir="rtl"] .hero-meta span::before { margin-inline-end: 0; margin-inline-st
 [data-theme="dark"] textarea:focus {
   border-color: var(--color-accent);
   box-shadow: 0 0 0 3px rgba(29, 168, 255, 0.20);
+  outline: none;
 }
 
+/* Logo image swap: light variant by default, dark variant in dark mode.
+   Footer is always on a dark background, so it always uses dark variant. */
 .brand-logo-dark { display: none; }
 [data-theme="dark"] .brand-logo-light { display: none; }
 [data-theme="dark"] .brand-logo-dark { display: block; }
