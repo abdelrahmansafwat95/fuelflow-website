@@ -137,7 +137,7 @@
 
   // Animated number counters — opt-in via data-count
   if (!reduceMotion && 'IntersectionObserver' in window) {
-    const numFmt = new Intl.NumberFormat(document.documentElement.lang || 'en');
+    const numFmt = new Intl.NumberFormat('en-US');
     const countObs = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (!entry.isIntersecting) return;
