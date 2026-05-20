@@ -254,15 +254,15 @@ code {
   letter-spacing: -0.01em;
 }
 
-.brand-mark {
-  width: 32px;
-  height: 32px;
-  border-radius: 8px;
-  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
-  display: grid;
-  place-items: center;
-  color: var(--color-accent);
-  font-weight: 800;
+.brand-logo {
+  height: 40px;
+  width: auto;
+  display: block;
+  border-radius: 6px;
+}
+
+.footer-brand .brand-logo {
+  height: 44px;
 }
 
 .nav-links {
