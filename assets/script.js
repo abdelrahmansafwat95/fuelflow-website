@@ -70,6 +70,98 @@
     });
   });
 
+  // Scroll-reveal: auto-tag common marketing elements
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!reduceMotion && 'IntersectionObserver' in window) {
+    const revealSelectors = [
+      '.section-head',
+      '.card',
+      '.eco-tile',
+      '.sec-card',
+      '.quote-card',
+      '.price-card',
+      '.form',
+      '.hero-cta',
+      '.hero-meta',
+      '.hero-visual',
+      '.trust-strip-inner',
+      '.cta-banner > *',
+      '.contact-aside',
+      '.footer-col',
+      '.footer-brand'
+    ].join(',');
+
+    document.querySelectorAll(revealSelectors).forEach(el => el.classList.add('reveal'));
+
+    // Auto-stagger siblings within grids
+    document.querySelectorAll('.grid-2, .grid-3, .grid-4, .eco-grid').forEach(grid => {
+      Array.from(grid.children).forEach((child, i) => {
+        if (i > 0 && i < 6) child.setAttribute('data-stagger', String(i));
+      });
+    });
+
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  } else {
+    // Reduced motion or no IO support: show everything immediately
+    document.querySelectorAll('.reveal').forEach(el => el.classList.add('is-visible'));
+  }
+
+  // Button hover spotlight — track mouse position
+  document.querySelectorAll('.btn').forEach(btn => {
+    btn.addEventListener('mousemove', (e) => {
+      const rect = btn.getBoundingClientRect();
+      btn.style.setProperty('--mx', ((e.clientX - rect.left) / rect.width * 100) + '%');
+      btn.style.setProperty('--my', ((e.clientY - rect.top) / rect.height * 100) + '%');
+    });
+  });
+
+  // Header shadow on scroll
+  const header = document.querySelector('.site-header');
+  if (header) {
+    const onScroll = () => {
+      if (window.scrollY > 8) header.classList.add('is-scrolled');
+      else header.classList.remove('is-scrolled');
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  }
+
+  // Animated number counters — opt-in via data-count
+  if (!reduceMotion && 'IntersectionObserver' in window) {
+    const numFmt = new Intl.NumberFormat(document.documentElement.lang || 'en');
+    const countObs = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        const el = entry.target;
+        const target = parseFloat(el.getAttribute('data-count'));
+        if (isNaN(target)) return;
+        const duration = 1400;
+        const start = performance.now();
+        const initial = 0;
+        const step = (now) => {
+          const t = Math.min((now - start) / duration, 1);
+          const eased = 1 - Math.pow(1 - t, 3);
+          const v = initial + (target - initial) * eased;
+          el.textContent = numFmt.format(Math.round(v));
+          if (t < 1) requestAnimationFrame(step);
+          else el.textContent = numFmt.format(target);
+        };
+        requestAnimationFrame(step);
+        countObs.unobserve(el);
+      });
+    }, { threshold: 0.4 });
+    document.querySelectorAll('[data-count]').forEach(el => countObs.observe(el));
+  }
+
   // Smooth focus on anchor links
   document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener('click', function (e) {
